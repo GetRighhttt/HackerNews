@@ -18,14 +18,8 @@ struct LoginView: View {
          Checks wether or not the user is aunthenticated.
          Displays the screen based on the boolean variable.
          */
-        if !viewModel.authenticated {
-            NavigationView {
-                List {
-                    
-                }.navigationTitle("Hacker News")
-                    .background(Color("BrownTint"))
-                    .foregroundColor(Color("Beige"))
-            }
+        if viewModel.authenticated {
+            ContentView()
         } else {
             /*
              If user is validated, this stack shows.
@@ -121,15 +115,6 @@ struct LoginView: View {
         }
     }
 }
-
-/*
- Allows list to recognize post based on ID.
- */
-struct IndividualPost: Identifiable {
-    var id: String
-    var title: String
-}
-
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {

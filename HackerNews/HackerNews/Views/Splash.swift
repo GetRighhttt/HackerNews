@@ -49,7 +49,7 @@ struct Splash: View {
             }
             
         }
-
+        
     }
 }
 
