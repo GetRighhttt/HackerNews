@@ -18,52 +18,14 @@ struct LoginView: View {
          Checks wether or not the user is aunthenticated.
          Displays the screen based on the boolean variable.
          */
-        if viewModel.authenticated {
-            ZStack {
-                
-                Color("BrownTint").opacity(0.8).ignoresSafeArea() // bg
-                
-                VStack(alignment: .center, spacing: 40) {
+        if !viewModel.authenticated {
+            NavigationView {
+                List {
                     
-                    Spacer()
-                    
-                    Text("Login Successful!")
-                        .font(.largeTitle)
-                        .bold()
-                        .foregroundColor(Color("DarkerBlue"))
-                    
-                    Image(systemName: "lock.open.desktopcomputer")
-                        .resizable()
-                        .renderingMode(.original)
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 105, height: 105)
-                        .foregroundColor(Color("DarkerBlue"))
-                    
-                    Text("Welcome back \(viewModel.username.uppercased())!")
-                        .font(.title)
-                        .bold()
-                        .foregroundColor(Color("DarkerBlue"))
-                    
-                    Spacer()
-                    
-                    Button("Back to Login Screen", action: viewModel.logOut)
-                        .frame(width: 320, height: 70)
-                        .font(.system(size: 26))
-                        .foregroundColor(Color("Pink"))
-                        .background(Color("DarkerBlue"))
-                        .cornerRadius(10)
-                        .padding(.bottom, 30)
-                        .shadow(radius: 5)
-                }
-                .padding()
+                }.navigationTitle("Hacker News")
+                    .background(Color("BrownTint"))
+                    .foregroundColor(Color("Beige"))
             }
-//            NavigationView {
-//                List {
-//
-//                }.navigationTitle("Hacker News")
-//                    .background(Color("BrownTint"))
-//                    .foregroundColor(Color("Beige"))
-//            }
         } else {
             /*
              If user is validated, this stack shows.
