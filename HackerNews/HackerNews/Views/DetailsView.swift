@@ -17,7 +17,7 @@ struct DetailsView: View {
     
     var body: some View {
         ZStack {
-            Color("BrownTint")
+            Color("BrownTint").ignoresSafeArea()
             WebView(urlString: url) // pass in url from webview struct
                 .cornerRadius(20)
         }
