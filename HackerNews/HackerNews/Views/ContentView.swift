@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            List {
+                
+            }.navigationTitle("Hacker News")
+            .background(Color("BrownTint"))
+            .foregroundColor(Color("Beige"))
         }
-        .padding()
     }
 }
 
