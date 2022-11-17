@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     // initialize network manager with observed object
     @ObservedObject var networkManager = NetworkManger()
     

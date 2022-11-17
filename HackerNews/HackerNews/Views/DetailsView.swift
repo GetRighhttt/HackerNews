@@ -9,7 +9,6 @@ import SwiftUI
 import WebKit
 
 struct DetailsView: View {
-    
     // initialize network manager with observed object
     @ObservedObject var networkManager = NetworkManger()
     
